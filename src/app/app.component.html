@@ -1,7 +1,33 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<main>
+  <header>
+    <a class="title" href="">
+      Blog Plat
+    </a>
+  </header>
+  <nav>
+    <item>
+      <a href="">端口扫描</a>
+      <subitem>
+        <a href="">扫描</a>
+      </subitem>
+      <subitem>
+        <a href="">扫描结果</a>
+      </subitem>
+    </item>
+    <item>
+      <a href="">网页爬虫</a>
+      <subitem>
+        <a href="">爬虫</a>
+      </subitem>
+      <subitem>
+        <a href="">网页列表</a>
+      </subitem>
+    </item>
+    <item>
+      <a href="">数据中心</a>
+    </item>
+  </nav>
+  <container>
+    <router-outlet></router-outlet>
+  </container>
+</main>

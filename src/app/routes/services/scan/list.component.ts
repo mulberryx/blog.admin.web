@@ -1,24 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
-import { DashboardComponent } from './spider.component'
+import { Component, OnInit } from '@angular/core';
 
-describe('DashboardComponent', () => {
-  let component: DashboardComponent
-  let fixture: ComponentFixture<DashboardComponent>
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
-    })
-    .compileComponents()
-  }))
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
-
-  it('should be created', () => {
-    expect(component).toBeTruthy()
-  })
+@Component({
+  selector: 'scan-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.less']
 })
+export class ScanList implements OnInit {
+  ngOnInit() {
+  }
+
+  getHeroes(): void {
+
+  }
+}

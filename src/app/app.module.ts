@@ -2,11 +2,22 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 
-import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import { HeroesComponent }      from './heroes/heroes.component';
-import { MessagesComponent }    from './messages/messages.component';
+import { App }         from './app.component';
+import { Home }   from './routes/home.component'
+
+import { Login }   from './routes/authorize/login.component'
+import { ForgetPassword }   from './routes/authorize/forget-password.component'
+
+import { DataCenterInstance }   from './routes/data-center/instance.component'
+import { DataCenterList }   from './routes/data-center/list.component'
+
+import { SpiderInstance }      from './routes/services/spider/instance.component'
+import { SpiderList }      from './routes/services/spider/list.component'
+import { Spider }      from './routes/services/spider/spider.component'
+
+import { ScanInstance }  from './routes/services/scan/instance.component'
+import { ScanList }  from './routes/services/scan/list.component'
+import { Scan }  from './routes/services/scan/scan.component'
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -17,12 +28,18 @@ import { AppRoutingModule }     from './app-routing.module';
     AppRoutingModule
   ],
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent
+    App,
+    Home,
+    Login,
+    ForgetPassword,
+    DataCenterList,
+    DataCenterInstance,
+    SpiderList,
+    Spider,
+    ScanInstance,
+    ScanList,
+    Scan
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ App ]
 })
 export class AppModule { }
