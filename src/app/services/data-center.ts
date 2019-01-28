@@ -1,10 +1,34 @@
 /**
- * 消息服务
+ * 用户服务
  * @author Philip
  */
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { Http, Headers, RequestOptions } from '@angular/http'
 
-@Injectable({ providedIn: 'root' })
-export class DataCenter {
+@Injectable()
+export class DataObject {
+    private headers = new Headers({ 'Content-Type': 'application/json;' })
+    private options = new RequestOptions({ headers: this.headers })
+
+    constructor (private http: Http) {
+        this.http = http
+    }
+    
+    /**
+     * 是否登录
+     * @param {object} 查询参数
+     */
+    public query(): object {
+        return {}
+    }
+
+    /**
+     * 是否登录
+     * @param {string} 对象id
+     */
+    public details(): object {
+        return {}
+    }
+
+    public add():
 }
