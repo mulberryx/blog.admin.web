@@ -1,6 +1,6 @@
 /**
  * 扫描结果
- * @author chenxiangyu
+ * @author Philip
  */
 export class ScaningResult {
     id: number;

@@ -1,6 +1,6 @@
 /**
  * 扫描结果
- * @author chenxiangyu
+ * @author Philip
  */
 export class DataInstance {
     id: number;

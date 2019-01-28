@@ -1,8 +1,8 @@
 /**
  * 扫描结果
- * @author chenxiangyu
+ * @author Philip
  */
-export class CrawlingResult {
+export class SpiderResult {
   id: number;
   name: string;
 }
