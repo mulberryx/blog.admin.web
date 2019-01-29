@@ -1,3 +1,7 @@
+/**
+ * 扫描
+ * @author Philip
+ */
 import { Component, OnInit } from '@angular/core'
 
 @Component({

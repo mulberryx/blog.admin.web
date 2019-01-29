@@ -1,5 +1,5 @@
 /**
- * 消息服务
+ * 扫描
  * @author Philip
  */
 import { Injectable } from '@angular/core';

@@ -1,5 +1,5 @@
 /**
- * 用户服务
+ * 数据中心 
  * @author Philip
  */
 import { Injectable } from '@angular/core'
@@ -7,8 +7,13 @@ import { Http, Headers, RequestOptions } from '@angular/http'
 
 @Injectable()
 export class DataObject {
-    private headers = new Headers({ 'Content-Type': 'application/json;' })
-    private options = new RequestOptions({ headers: this.headers })
+    private headers = new Headers({
+        'Content-Type': 'application/json;' 
+    })
+
+    private options = new RequestOptions({
+        headers: this.headers
+    })
 
     constructor (private http: Http) {
         this.http = http
@@ -18,7 +23,7 @@ export class DataObject {
      * 是否登录
      * @param {object} 查询参数
      */
-    public query(): object {
+    public query (filters, pageNum, pageSize): object {
         return {}
     }
 
@@ -26,9 +31,23 @@ export class DataObject {
      * 是否登录
      * @param {string} 对象id
      */
-    public details(): object {
+    public details (id): object {
         return {}
     }
 
-    public add():
+    /**
+     * 是否登录
+     * @param {string} 对象id
+     */
+    public add (): object {
+        return {}
+    }
+
+    /**
+     * 是否登录
+     * @param {string} 对象id
+     */
+    public update (): object {
+        return {}
+    }
 }

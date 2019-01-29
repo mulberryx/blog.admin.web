@@ -1,3 +1,8 @@
+/**
+ * 数据中心实例
+ * @author Philip
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
