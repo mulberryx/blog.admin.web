@@ -1,5 +1,5 @@
 <template>
-<div class="view view-tag-list">
+<div class="view view-plan-list">
     <el-table
       :data="tableData"
       v-loading="loading"

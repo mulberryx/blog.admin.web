@@ -5,69 +5,68 @@
     </div>
     <div class="left-nav">
         <el-menu
-            default-active="0"
+            default-active="home"
             class="left-nav-menu"
             @open="handleOpen"
             @close="handleClose">
-            <el-menu-item index="0">
-                <i class="el-icon-share"></i>
-                <span slot="title">首页</span>
+            <el-menu-item index="home">
+                <router-link to="/" slot="title"><i class="el-icon-share"></i>首页</router-link>
             </el-menu-item>
-            <el-submenu index="1">
+            <el-submenu index="user">
                 <template slot="title">
                     <i class="el-icon-star-off"></i>
                     <span>用户管理</span>
                 </template>
-                <el-menu-item index="1-1">查询</el-menu-item>
-                <el-menu-item index="1-2">新建 / 编辑</el-menu-item>
+                <el-menu-item index="user-list"><router-link to="/user-list">查询</router-link></el-menu-item>
+                <el-menu-item index="user-save"><router-link to="/user-save">新建 / 编辑</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="2">
+            <el-submenu index="content">
                 <template slot="title">
                     <i class="el-icon-document"></i>
                     <span>内容管理</span>
                 </template>
-                <el-menu-item index="2-1">查询</el-menu-item>
-                <el-menu-item index="2-2">新建 / 编辑</el-menu-item>
+                <el-menu-item index="content-list"><router-link to="/content-list">查询</router-link></el-menu-item>
+                <el-menu-item index="content-save"><router-link to="/content-save">新建 / 编辑</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="3">
+            <el-submenu index="tag">
                 <template slot="title">
                     <i class="el-icon-news"></i>
                     <span>标签管理</span>
                 </template>
-                <el-menu-item index="3-1">查询</el-menu-item>
-                <el-menu-item index="3-2">新建 / 编辑</el-menu-item>
+                <el-menu-item index="tag-list"><router-link to="/tag-list">查询</router-link></el-menu-item>
+                <el-menu-item index="tag-save"><router-link to="/tag-save">新建 / 编辑</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="4">
+            <el-submenu index="journal">
                 <template slot="title">
                     <i class="el-icon-tickets"></i>
                     <span>日志管理</span>
                 </template>
-                <el-menu-item index="4-1">查询</el-menu-item>
-                <el-menu-item index="4-2">新建 / 编辑</el-menu-item>
+                <el-menu-item index="journal-list"><router-link to="/journal-list">查询</router-link></el-menu-item>
+                <el-menu-item index="journal-save"><router-link to="/journal-save">新建 / 编辑</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="5">
+            <el-submenu index="plan">
                 <template slot="title">
                     <i class="el-icon-menu"></i>
                     <span>计划管理</span>
                 </template>
-                <el-menu-item index="5-1">查询</el-menu-item>
-                <el-menu-item index="5-2">新建 / 编辑</el-menu-item>
+                <el-menu-item index="plan-list"><router-link to="/plan-list">查询</router-link></el-menu-item>
+                <el-menu-item index="plan-save"><router-link to="/plan-excute">新建 / 编辑</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="6">
+            <el-submenu index="scan">
                 <template slot="title">
                     <i class="el-icon-search"></i>
                     <span>扫描</span>
                 </template>
-                <el-menu-item index="6-1">结果查询</el-menu-item>
-                <el-menu-item index="6-2">运行</el-menu-item>
+                <el-menu-item index="scan-list"><router-link to="/scan-list">结果查询</router-link></el-menu-item>
+                <el-menu-item index="scan-excute"><router-link to="/scan-excute">运行</router-link></el-menu-item>
             </el-submenu>
-            <el-submenu index="7">
+            <el-submenu index="spider">
                 <template slot="title">
                     <i class="el-icon-view"></i>
                     <span>爬虫</span>
                 </template>
-                <el-menu-item index="7-1">结果查询</el-menu-item>
-                <el-menu-item index="7-2">运行</el-menu-item>
+                <el-menu-item index="spider-list"><router-link to="/home">结果查询</router-link></el-menu-item>
+                <el-menu-item index="spider-excute"><router-link to="/home">运行</router-link></el-menu-item>
             </el-submenu>
         </el-menu>
     </div>
@@ -77,7 +76,7 @@
 </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="less">
 .wrapper {
     position: absolute;
     top: 0;
@@ -85,11 +84,51 @@
     left: 0;
     bottom: 0;
 
+    .el-menu {
+        background-color: transparent;
+
+        .el-menu-item {
+            color: #fff;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            &.is-active {
+                color: #409EFF;
+
+                a {
+                    color: #409EFF;
+                }
+            }
+        }
+
+        .el-submenu__title {
+            color: #fff;
+
+            &.is-active {
+                color: #409EFF;
+            }
+
+            i {
+                color: #fff;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
     .header {
         height: 48px;
         width: 100%;
-        border-bottom: 1px solid #e6e6e6;
-        background: #5cacff;
+        background-color: rgba(64, 158, 255, 0.1);
 
         .title {
             margin: 0;
@@ -102,7 +141,7 @@
 
     .left-nav {
         position: absolute;
-        top: 49px;
+        top: 48px;
         bottom: 0;
         width: 260px;
         margin: 0;
@@ -120,12 +159,17 @@
         bottom: 0;
     }
 }
-</style>
 
-<script>
-export default {
-    methods: {
-
-    }
+// 全局公共样式
+.view {
+    padding: 15px 10px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-</script>
+
+.el-pagination {
+    margin: 15px 0 0 0;
+}
+</style>
