@@ -76,7 +76,7 @@
 </div>
 </template>
 
-<style lang="less">
+<style lang="scss">
 .wrapper {
     position: absolute;
     top: 0;
