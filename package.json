@@ -29,6 +29,7 @@
     "compression-webpack-plugin": "^1.1.11",
     "connect-history-api-fallback": "^1.5.0",
     "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^2.1.1",
     "element-theme-chalk": "^2.5.4",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
